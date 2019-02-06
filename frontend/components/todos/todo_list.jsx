@@ -10,9 +10,12 @@ const TodoList = ({todos, receiveTodo}) => {
     });
 
   return (
-    <ul>
-      {todoItems}
-    </ul>
+    <div>
+      <ul>
+        {todoItems}
+      </ul>
+      <TodoForm receiveTodo={receiveTodo} />
+    </div>
   );  
 };
 
