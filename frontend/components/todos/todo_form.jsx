@@ -55,7 +55,7 @@ class TodoForm extends React.Component {
             onChange={this.handleChange('body')}
           />
         </label>
-        <input type="submit" value="Create a Todo"/>
+        <input type="submit" value="Create Todo"/>
       </form>
     );
   }

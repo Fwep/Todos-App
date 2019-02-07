@@ -21,12 +21,10 @@ class TodoListItem extends React.Component {
   }
 
   render() {
-    const {removeTodo, todo} = this.props;
-    const { done } = todo; 
+    const {todo, todo: { done }} = this.props;
     return (
       <li>
-        <h3>{this.props.todo.title}</h3>
-        <button onClick={() => removeTodo(todo)}>Delete</button>
+        <h3>{todo.title}</h3>
         <button onClick={this.toggleTodo}>{done ? 'Undo' : 'Done'}</button>
       </li>
     );
