@@ -5,7 +5,22 @@ import {
 } from '../actions/step_actions';
 import merge from 'lodash/merge';
 
-const stepsReducer = (state = {}, action) => {
+const initialState = {
+  1: {
+    id: 1,
+    title: "Read Cracking the Coding Interview",
+    done: false,
+    todo_id: 1
+  },
+  2: {
+    id: 2,
+    title: "Buy gas",
+    done: false,
+    todo_id: 2
+  }
+};
+
+const stepsReducer = (state = initialState, action) => {
   Object.freeze(state);
   let nextState = {};
   
