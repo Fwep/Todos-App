@@ -29,7 +29,7 @@ class TodoListItem extends React.Component {
       <li>
         <h3 onClick={() => this.setState({detail: !this.state.detail})}>{todo.title}</h3>
         <button onClick={this.toggleTodo}>{done ? 'Undo' : 'Done'}</button>
-        {this.state.detail ? <TodoDetailViewContainer todoBody={todo.body}/> : <div></div>}
+        {this.state.detail ? <TodoDetailViewContainer todo={todo} todoBody={todo.body}/> : <div></div>}
       </li>
     );
   }
