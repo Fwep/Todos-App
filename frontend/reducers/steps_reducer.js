@@ -9,12 +9,14 @@ const initialState = {
   1: {
     id: 1,
     title: "Read Cracking the Coding Interview",
+    body: "Including the Appendix!",
     done: false,
     todo_id: 1
   },
   2: {
     id: 2,
     title: "Buy gas",
+    body: "Costco gas is best bang",
     done: false,
     todo_id: 2
   }
