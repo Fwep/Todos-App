@@ -22,11 +22,9 @@ class TodoForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    const { receiveTodo } = this.props;
-    receiveTodo(Object.assign({},
-      {id: new Date().getTime()},
-      this.state
-      )).then(this.clearInput());
+    const todo = Object.assign({}, this.state, {id: new Date().getTime()});
+    this.props.receiveTodo(todo);
+    this.clearInput();
   }
 
   clearInput() {
